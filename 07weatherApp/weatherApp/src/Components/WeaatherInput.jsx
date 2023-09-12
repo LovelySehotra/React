@@ -30,12 +30,12 @@ function WeatherApp() {
                     <h1 className=" font-extrabold tracking-wider text-xl text-center py-3"><span ></span>{city}'s Weather</h1>
                     <main>
                         <div className=" flex gap-3 justify-evenly py-4 my-4 ">
-                            <div className="">
-                                <div className="rounded-md border border-sky-400 w-96 h-64 flex flex-col  py-0">
+                            <div className="bg-white rounded-xl">
+                                <div className="rounded-xl border border-sky-400 w-96 h-64 flex flex-col  py-0">
                                     <div className="bg-sky-400 rounded-md ">
                                         <h4 className="text-center tracking-wider text-xl py-3">Temperature Info</h4>
                                     </div>
-                                    <div className="card-body text-center flex flex-col gap-8 pt-1">
+                                    <div className=" card-body text-center flex flex-col gap-8 pt-1 text-xl">
                                         <h1 className=""> <span ></span>{weatherData.temp}&deg;C</h1>
                                         <ul className="list-unstyled mt-3 mb-4">
 
@@ -46,7 +46,7 @@ function WeatherApp() {
                                                 Max Temperature is <span >{weatherData.max_temp}</span>
                                             </li>
                                         </ul>
-                                        <button type="button" className="bg-sky-400 rounded-md border border-sky-400">Sign up for free</button>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -55,38 +55,38 @@ function WeatherApp() {
                                     <div className="bg-sky-400 rounded-md ">
                                         <h4 className="text-center tracking-wider text-xl py-3">Humidity</h4>
                                     </div>
-                                    <div className="card-body text-center flex flex-col gap-8 pt-1">
+                                    <div className="card-body text-center flex flex-col gap-8 pt-1 text-xl">
                                         <h1 className="card-title pricing-card-title"> <span id="temp"></span>{weatherData.humidity}</h1>
                                         <ul className="list-unstyled mt-3 mb-4">
 
                                             <li>
-                                                Min Temperature is <span >{weatherData.cloud_pct}</span>
+                                                Cloud Precipitation is <span >{weatherData.cloud_pct}</span>
                                             </li>
                                             <li>
-                                                Max Temperature is <span >{weatherData.feel_like}</span>
+                                                Feel Like is <span >{weatherData.feels_like}</span>
                                             </li>
                                         </ul>
-                                        <button type="button" className="bg-sky-400 rounded-md border border-sky-400">Sign up for free</button>
+                                        <button type="button" className="bg-sky-400 rounded-md border border-sky-400">{city}</button>
                                     </div>
                                 </div>
                             </div>
-                            <div className="">
+                            <div className="bg-white rounded-xl">
                                 <div className="rounded-md border border-sky-400 w-96 h-64 flex flex-col  py-0">
                                     <div className="bg-sky-400 rounded-md ">
                                         <h4 className="text-center tracking-wider text-xl py-3">Wind</h4>
                                     </div>
-                                    <div className="card-body text-center flex flex-col gap-8 pt-1">
-                                        <h1 className="card-title pricing-card-title"> <span id="temp"></span>{weatherData.wind_speed}</h1>
+                                    <div className="card-body text-center flex flex-col gap-8 pt-1 text-xl">
+                                        <h1 className="card-title pricing-card-title"> <span id="temp"></span>{weatherData.wind_speed}Km/H</h1>
                                         <ul className="list-unstyled mt-3 mb-4">
 
                                             <li>
-                                                Min Temperature is <span id="min_temp">{weatherData.sunrise}</span>
+                                                Sunrise is <span id="min_temp">{weatherData.sunrise}</span>
                                             </li>
                                             <li>
-                                                Max Temperature is <span id="max_temp">{weatherData.sunset}</span>
+                                                SunSet is <span id="max_temp">{weatherData.sunset}</span>
                                             </li>
                                         </ul>
-                                        <button type="button" className="bg-sky-400 rounded-md border border-sky-400">Sign up for free</button>
+                                        
                                     </div>
                                 </div>
                             </div>
